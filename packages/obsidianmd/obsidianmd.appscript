@@ -1,0 +1,7 @@
+name=obsidianmd
+version=1.5.11
+url=download/v{version}/Obsidian-{version}.AppImage
+repository=https://github.com/obsidianmd/obsidian-releases/releases/{url}
+description=A Markdown notes application
+hash=73f6d9e2bad7a6766d3d40b24757afe042f4d90f082efefdab8b8a31193b2494
+checksum={hash}  Obisidian-{version}.AppImage
