@@ -7,9 +7,7 @@ import json
 def get_packages_dirs(path: str = SOURCES_DIR) -> Dict[str, str]:
     packages = os.listdir(path)
     for package in packages:
-        package_exists = os.path.isdir(os.path.join(path, package))
-        if package_exists:
-            pass
+        print(package)
     return {}
 
 
