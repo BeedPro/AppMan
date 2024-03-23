@@ -1,10 +1,17 @@
 from typing import List, Dict
 from constants import SOURCES_DIR
 import os
-import json
 
 
+# TODO: Add tests to tests/sources
 def get_packages(path: str = SOURCES_DIR) -> List[Dict]:
+    """
+    Get the list of packages in the source directory
+        Parameters:
+            path (str): The path to the source directory, Default: SOURCES_DIR
+        Returns:
+            packages (List): The list of packages in the source directory
+    """
     packages_in_source = os.listdir(path)
     packages_data = []
     for package in packages_in_source:
@@ -17,14 +24,31 @@ def get_packages(path: str = SOURCES_DIR) -> List[Dict]:
     return packages_data
 
 
-def get_package(name: str, packages_data) -> Dict[str, str]:
+# TODO: Add tests to tests/sources
+def get_package(name: str, packages_data: List[Dict]) -> Dict[str, str]:
+    """
+    Get the package data from the packages_data list
+        Parameters:
+            name (str): The name of the package
+            packages_data (List): The list of packages data
+        Returns:
+            package (Dict): The package data
+    """
     for package in packages_data:
         if package["name"] == name:
             return package
     return {}
 
 
+# TODO: Add tests to tests/sources
 def format_script(script: Dict) -> Dict:
+    """
+    For a given script return the formated data of the placeholder texts within the script
+        Parameters:
+            script (Dict): The script data
+        Returns:
+            script (Dict): The formated script data
+    """
     for script_key in script.keys():
         match script_key:
             case "url":
@@ -41,7 +65,16 @@ def format_script(script: Dict) -> Dict:
     return script
 
 
+# TODO: Add tests to tests/sources
 def read_script(package_name: str, filename: str) -> Dict:
+    """
+    Read the script file and return the formated data
+        Parameters:
+            package_name (str): The name of the package
+            filename (str): The name of the script file
+        Returns:
+            script (Dict): The formated script data
+    """
     script_data = {}
     path = f"{SOURCES_DIR}/{package_name}/{filename}"
     with open(path, "r") as script_file:
@@ -56,7 +89,15 @@ def read_script(package_name: str, filename: str) -> Dict:
     return format_script(script_data)
 
 
+# TODO: Add tests to tests/sources
 def get_appman_data(name: str) -> Dict[str, str]:
+    """
+    Get the appman data for the given package name
+        Parameters:
+            name (str): The name of the package
+        Returns:
+            script (Dict): The script data from the appman file
+    """
     package = get_package(name, get_packages())
     script = read_script(package["name"], package["script"])
     return script
