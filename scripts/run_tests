@@ -1,2 +1,0 @@
-#!/bin/bash
-.venv/bin/python -m unittest discover -v -s tests/sources/ -p 'test_*.py'
