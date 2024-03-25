@@ -1,5 +1,5 @@
 from typing import List, Dict
-from constants import SOURCES_DIR
+from appman.constants import SOURCES_DIR
 import os
 
 
