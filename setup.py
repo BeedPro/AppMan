@@ -1,31 +1,20 @@
 from setuptools import setup, find_packages
 
-# Project metadata
-NAME = "Your_Project_Name"
-DESCRIPTION = "Brief description of your project"
+NAME = "AppMan"
+DESCRIPTION = "A simple AppMan package manager written in Python"
 URL = "https://github.com/BeedPro/AppMan"
-EMAIL = "youremail@example.com"
-AUTHOR = "Your Name"
+EMAIL = "beed@appmandev.com"
+AUTHOR = "Beed"
 REQUIRES_PYTHON = ">=3.11.0"
-VERSION = "0.1.0"
+VERSION = "0.0.1"
 
-# Required packages
-REQUIRED = [
-    "package1",
-    "package2",
-    # Add any other dependencies here
-]
+REQUIRED = []
 
-# Additional packages to include, if any
-EXTRAS = {
-    # 'extra_feature': ['package3', 'package4'],
-}
+EXTRAS = {}
 
-# Long description from README.md
 with open("README.md", "r", encoding="utf-8") as f:
     LONG_DESCRIPTION = f.read()
 
-# Setup configuration
 setup(
     name=NAME,
     version=VERSION,
@@ -40,9 +29,8 @@ setup(
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
-    license="GPL",  # GNU GENERAL PUBLIC LICENSE
+    license="GPL",
     classifiers=[
-        # Trove classifiers
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.11",
