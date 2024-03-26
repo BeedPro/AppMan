@@ -1,4 +1,4 @@
-from constants import APPIMAGE_DOWNLOAD_PATH
+from appman.constants import APPIMAGE_DOWNLOAD_PATH
 import os
 
 
