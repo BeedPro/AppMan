@@ -24,7 +24,6 @@ def get_packages(path: str = SOURCES_DIR) -> List[Dict]:
     return packages_data
 
 
-# TODO: Add tests to tests/sources
 def get_package(name: str, packages_data: List[Dict]) -> Dict[str, str]:
     """
     Get the package data from the packages_data list
