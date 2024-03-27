@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Simple launcher for pyook."""
+"""Simple launcher for appman."""
 
 import sys
 
